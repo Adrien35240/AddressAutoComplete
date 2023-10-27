@@ -1,0 +1,81 @@
+{
+	"info": {
+		"_postman_id": "879fa505-8ab4-4c71-aa34-42c81bbac9a9",
+		"name": "AddressAutoComplete",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "22870404"
+	},
+	"item": [
+		{
+			"name": "get cities",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "accept",
+						"value": "*/*"
+					}
+				],
+				"url": {
+					"raw": "https://localhost:32774/api/v1/city?q=rennes&limit=10",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "32774",
+					"path": [
+						"api",
+						"v1",
+						"city"
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "rennes"
+						},
+						{
+							"key": "limit",
+							"value": "10"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get places by city",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:32774/api/v1/places?city=Rennes&places=Pontchaillou&limit=10",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "32774",
+					"path": [
+						"api",
+						"v1",
+						"places"
+					],
+					"query": [
+						{
+							"key": "city",
+							"value": "Rennes"
+						},
+						{
+							"key": "places",
+							"value": "Pontchaillou"
+						},
+						{
+							"key": "limit",
+							"value": "10"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
